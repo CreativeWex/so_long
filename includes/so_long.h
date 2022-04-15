@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jnidorin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/15 18:10:28 by jnidorin          #+#    #+#             */
+/*   Updated: 2022/04/15 18:10:52 by jnidorin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
@@ -73,5 +83,5 @@ int		ft_render_img(t_game *game);
 int		ft_move_enemy(t_game *game);
 void	ft_move_enemy_left(t_game *game, int *f);
 void	ft_move_enemy_right(t_game *game, int *f);
-
+int		ft_animation_2(t_game *game);
 #endif

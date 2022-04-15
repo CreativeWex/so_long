@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_put_images.c                                    :+:      :+:    :+:   */
+/*   put_images.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abernita <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jnidorin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/26 11:21:31 by abernita          #+#    #+#             */
-/*   Updated: 2022/01/26 11:21:33 by abernita         ###   ########.fr       */
+/*   Created: 2022/04/15 18:14:42 by jnidorin          #+#    #+#             */
+/*   Updated: 2022/04/15 18:15:51 by jnidorin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,30 +57,23 @@ int	ft_animation(t_game *game)
 	int			h;
 
 	if (u % 15 == 0)
-	{
 		if (game->enemies)
 			ft_move_enemy(game);
-	}
-	if (u % 5 == 0)
-		game->coll_img = mlx_xpm_file_to_image(game->mlx,
-				"./img/btc3.xpm", &w, &h);
-	if (u % 15 == 0)
+	if (u % 11 == 0)
 		game->coll_img = mlx_xpm_file_to_image(game->mlx,
 				"./img/btc1.xpm", &w, &h);
-	if (u % 20 == 0)
-		game->coll_img = mlx_xpm_file_to_image(game->mlx,
-				"./img/btc4.xpm", &w, &h);			
-	if (u % 30 == 0)
+	if (u % 31 == 0)
 		game->coll_img = mlx_xpm_file_to_image(game->mlx,
 				"./img/btc2.xpm", &w, &h);
-	if (u % 45 == 0)
+	if (u % 51 == 0)
 		game->coll_img = mlx_xpm_file_to_image(game->mlx,
-				"./img/btc5.xpm", &w, &h);
+				"./img/btc3.xpm", &w, &h);
+	if (u % 71 == 0)
+		game->coll_img = mlx_xpm_file_to_image(game->mlx,
+				"./img/btc3.xpm", &w, &h);
 	if (game->winner == 1 || game->winner == -1)
-	{
 		if (u % 300 == 0)
 			exit (0);
-	}
 	u++;
 	ft_put_images(game, 0, 0);
 	return (0);
@@ -91,7 +84,6 @@ void	ft_check_winner(t_game *game, int s_x, int s_y, char *s)
 	ft_put_images_to_window(game, (s_x), (s_y));
 	if (game->winner == 0)
 	{
-		// mlx_string_put(game->mlx, game->window, 5, 5, 0xFFFF00, "Moves:");
 		mlx_string_put(game->mlx, game->window, 20, 20, 0xFFFF00, "Moves:");
 		mlx_string_put(game->mlx, game->window, 82, 20, 0xFFFF00, s);
 	}
