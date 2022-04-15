@@ -1,0 +1,5 @@
+
+.DS_Store
+*.o
+srcs/*.o
+so_long
