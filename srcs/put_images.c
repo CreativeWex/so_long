@@ -91,8 +91,9 @@ void	ft_check_winner(t_game *game, int s_x, int s_y, char *s)
 	ft_put_images_to_window(game, (s_x), (s_y));
 	if (game->winner == 0)
 	{
-		mlx_string_put(game->mlx, game->window, 5, 5, 0xFFFF00, "Moves:");
-		mlx_string_put(game->mlx, game->window, 66, 5, 0xFFFF00, s);
+		// mlx_string_put(game->mlx, game->window, 5, 5, 0xFFFF00, "Moves:");
+		mlx_string_put(game->mlx, game->window, 20, 20, 0xFFFF00, "Moves:");
+		mlx_string_put(game->mlx, game->window, 82, 20, 0xFFFF00, s);
 	}
 	else if (game->winner == 1)
 		mlx_string_put(game->mlx, game->window, s_x, s_y, \
