@@ -61,12 +61,21 @@ int	ft_animation(t_game *game)
 		if (game->enemies)
 			ft_move_enemy(game);
 	}
+	if (u % 5 == 0)
+		game->coll_img = mlx_xpm_file_to_image(game->mlx,
+				"./img/btc3.xpm", &w, &h);
 	if (u % 15 == 0)
 		game->coll_img = mlx_xpm_file_to_image(game->mlx,
 				"./img/btc1.xpm", &w, &h);
+	if (u % 20 == 0)
+		game->coll_img = mlx_xpm_file_to_image(game->mlx,
+				"./img/btc4.xpm", &w, &h);			
 	if (u % 30 == 0)
 		game->coll_img = mlx_xpm_file_to_image(game->mlx,
 				"./img/btc2.xpm", &w, &h);
+	if (u % 45 == 0)
+		game->coll_img = mlx_xpm_file_to_image(game->mlx,
+				"./img/btc5.xpm", &w, &h);
 	if (game->winner == 1 || game->winner == -1)
 	{
 		if (u % 300 == 0)
