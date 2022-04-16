@@ -70,7 +70,7 @@ int	ft_animation(t_game *game)
 				"./img/btc3.xpm", &w, &h);
 	if (u % 71 == 0)
 		game->coll_img = mlx_xpm_file_to_image(game->mlx,
-				"./img/btc3.xpm", &w, &h);
+				"./img/btc4.xpm", &w, &h);
 	if (game->winner == 1 || game->winner == -1)
 		if (u % 300 == 0)
 			exit (0);
