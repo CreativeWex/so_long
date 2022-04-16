@@ -40,6 +40,8 @@ typedef struct s_game
 	void	*exit_img;
 	void	*coll_img;
 	void	*coll2_img;
+	void	*coll3_img;
+	void	*coll4_img;
 	void	*p_u_img;
 	void	*p_d_img;
 	void	*p_l_img;

@@ -35,7 +35,11 @@ int	ft_open_collect(t_game *game)
 			"./img/btc1.xpm", &iw, &ih);
 	game->coll2_img = mlx_xpm_file_to_image(game->mlx,
 			"./img/btc2.xpm", &iw, &ih);
-	if (!(game->coll_img) || !(game->coll2_img))
+	game->coll3_img = mlx_xpm_file_to_image(game->mlx,
+			"./img/btc3.xpm", &iw, &ih);
+	game->coll4_img = mlx_xpm_file_to_image(game->mlx,
+			"./img/btc4.xpm", &iw, &ih);
+	if (!(game->coll_img) || !(game->coll2_img) || !(game->coll3_img) || !(game->coll4_img))
 		return (-1);
 	return (0);
 }
