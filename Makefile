@@ -33,9 +33,6 @@ END		=	\033[0m
 
 all		:	$(NAME)
 
-${LIBFT}:
-	@make -C libft/
-
 ${LIBMLX}:
 	@echo "$(BLUE)Compilation of mlx$(END)"
 	@make -C mlx/
@@ -54,13 +51,11 @@ $(NAME)	:	$(OBJS) $(HEADER) ${SRCS} ${HEAD} ${LIBFT} ${LIBMLX}
 clean:
 			@$(RM) $(OBJ) $(OBJ_B)
 			@$(RM) $(OBJ)
-			@make -s -C libft/ clean
 			@make -s -C mlx/ clean
 			@rm -f $(OBJS)
 			@echo "$(BLUE)\nCleaning done\n$(END)"
 
 fclean	:	clean
-			@make -C libft/ fclean
 			@echo Deleting $(NAME)
 			@$(RM) $(NAME) $(NAME_B)
 			@echo "$(BLUE)\nDeleting done!\n$(END)"
